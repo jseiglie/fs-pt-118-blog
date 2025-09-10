@@ -18,6 +18,11 @@ export const initialStore=()=>{
 
 export default function storeReducer(store, action = {}) {
   switch(action.type){
+    case 'getPokemons':
+    return {
+      ...store,
+      pokemons: action.payload.data
+    }
     case 'add_task':
 
       const { id,  color } = action.payload
